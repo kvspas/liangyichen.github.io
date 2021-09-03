@@ -8,6 +8,7 @@
     <meta http-equiv="Content-Language" Content="en-US" />
     <meta name="keywords" content="梁逸晨, liang yichen" />
     <meta name="description" content="Liang Yichen, A Photographer Around the World." />
+    <meta name="area" content="global" />
     <meta name="fv" content="2.933333333333333" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -24,9 +25,541 @@
 <meta property="og:description" content="a large part of these videos and photos comes from the Himalayas, recording local people and their lives, history, and landscapes." />
 <meta property="og:image" content="/public/liangyichen1280.jpg" />
 <script>
-var __extends=(this&&this.__extends)||(function(){var a=function(e,c){a=Object.setPrototypeOf||({__proto__:[]} instanceof Array&&function(g,f){g.__proto__=f})||function(h,f){for(var g in f){if(f.hasOwnProperty(g)){h[g]=f[g]}}};return a(e,c)};return function(f,c){a(f,c);function e(){this.constructor=f}f.prototype=c===null?Object.create(c):(e.prototype=c.prototype,new e())}})();var RealTimeData=(function(){function a(){this.DocumentAllHeight=0;this.UnVisitableHeight=0;this.VisitHeight=0}return a}());var Application=(function(){function a(){}a.prototype.createBaesXMLHttp=function(c,e,d){var b=new XMLHttpRequest();b.open(e,c,true);if(d!=null){b.onreadystatechange=function(){if(b.readyState==4&&b.status==200){if(d!=null&&d!=undefined){d(b.responseText)}}}}return b};a.prototype.createXMLHttp=function(c,e,d){var b=this.createBaesXMLHttp(c,e,d);b.setRequestHeader("Cache-Control","no-cache");b.setRequestHeader("If-Modified-Since","0");return b};a.prototype.ser=function(c){var d=[];for(var b in c){d.push(encodeURIComponent(b)+"="+encodeURIComponent(c[b]))}return d.join("&")};a.prototype.Get=function(c,d){var b=this.createXMLHttp(c,"GET",d);b.send(null)};a.prototype.PostObject=function(c,e,d){var b=this.createXMLHttp(c,"POST",d);b.setRequestHeader("Content-type","application/json; charset=utf-8");b.send(JSON.stringify(e))};a.prototype.PostString=function(c,e,d){var b=this.createXMLHttp(c,"POST",d);b.setRequestHeader("Content-type","application/x-www-form-urlencoded");b.send(e)};a.prototype.Post=function(b,d,c){this.PostString(b,this.ser(d),c)};a.prototype.SerializeFormToArray=function(c){var e=[],b=c.elements,g=0,h=b.length,l=null;for(;g<h;g++){l=b[g];switch(l.type){case"select-one":case"select-multiple":if(l.name.length){var f=0,d,k=l.options.length;for(;f<k;f++){d=l.options[f];if(d.selected){e.push(encodeURIComponent(l.name)+"="+encodeURIComponent(d.value))}}}break;case undefined:case"submit":case"reset":case"file":case"button":break;case"radio":case"checkbox":if(!l.checked){break}default:if(l.name.length&&l.value){e.push(encodeURIComponent(l.name)+"="+encodeURIComponent(l.value))}}}return e.join("&")};a.prototype.Upload=function(f,d,e,c){var g=new FormData(document.forms.namedItem(f));var b=this.createBaesXMLHttp(d,"POST",e);if(c!=null&&c!=undefined){b.upload.onprogress=c}b.send(g)};a.prototype.Include=function(d,c){var b=document.createElement("script");b.type="text/javascript";b.src=d;if(c){b.async=true}document.getElementsByTagName("head")[0].appendChild(b);return b};a.prototype.iFrame=function(c){var b=document.createElement("iframe");b.src=c;b.setAttribute("width","0");b.setAttribute("height","0");b.setAttribute("frameborder","0");document.body.appendChild(b)};a.prototype.FunctionCallBack=function(c,b){return function(){c(b)}};a.prototype.WebSocket=function(e,d,g,c,f){var b;if("WebSocket" in window){b=new WebSocket(e);b.onopen=d;b.onmessage=g;if(c!=undefined&&f!=null){b.onclose=c}if(f!=undefined&&f!=null){b.onerror=f}}return b};a.prototype.PreloadImage=function(){var f=new Array();if(document.images){var d=0;var c=f.length;var b=arguments;var e=b.length;for(;d<e;d++){if(b[d].indexOf("#")!=0){f[c]=new Image;f[c++].src=b[d]}}}return f};a.prototype.SetCookie=function(b,d){var c=3650;var e=new Date();e.setTime(e.getTime()+c*24*60*60*1000);document.cookie=b+"="+escape(d)+";expires="+e.toUTCString()+";path=/"};a.prototype.GetCookie=function(c){var b=document.cookie.match(new RegExp("(^| )"+c+"=([^;]*)(;|$)"));if(b!=undefined){return unescape(b[2])}return undefined};a.prototype.DeleteCookie=function(c){var b=3*24*60*60*1000;var d=new Date();d.setTime(d.getTime()-b);document.cookie=c+"=;expires="+d.toUTCString()};return a}());var DomOpertor=(function(){function a(){}a.prototype.GE=function(c){if(arguments.length==0){return false}var b=[];for(var d=0;d<arguments.length;d++){var e=arguments[d];if(typeof(e)=="string"){e=document.getElementById(e)}if(arguments.length==1){return e}b.push(e)}return b};a.prototype.RemoveByObject=function(c){if(c.parentNode){var b=c.parentNode;b.removeChild(c);return b}else{return c}};a.prototype.RemoveById=function(c){var b=document.getElementById(c);return this.RemoveByObject(b)};a.prototype.AppendByParentId=function(e,b,d){var c=document.getElementById(e);return this.AppendByParentObject(c,b,d)};a.prototype.AppendByParentObject=function(d,c,b){var e=this.CreateBaseNode(c,b);d.appendChild(e);return e};a.prototype.CreateBaseNode=function(c,b){var d=document.createElement(c);if(b!=null&&b!=undefined){d.setAttribute("id",b)}return d};a.prototype.SetClass=function(c,d){var b=document.createAttribute("class");b.value=d;c.setAttributeNode(b);return c};a.prototype.MetaContent=function(c){var b="";var e=document.getElementsByTagName("meta");for(var d=0;d<e.length;d++){if(e[d].getAttribute("name")==c){b=e[d].getAttribute("content")}}return b};a.prototype.AppendListener=function(f,b,c){if(f.addEventListener){try{f.addEventListener(b,c,false)}catch(d){console.log(d)}}return f};a.prototype.AppendOnload=function(b){this.AppendListener(window,"load",b)
-};a.prototype.VisitWidth=function(){var b=0;if(document.compatMode=="CSS1Compat"){b=document.documentElement.clientWidth}else{b=document.body.clientWidth}return b};a.prototype.VisitHeight=function(){var b=0;if(document.compatMode=="CSS1Compat"){b=document.documentElement.clientHeight}else{b=document.body.clientHeight}return b};a.prototype.UnVisitableHeight=function(){var d=0,c=0,b=0;if(document.body){c=document.body.scrollTop}if(document.documentElement){b=document.documentElement.scrollTop}d=(c-b>0)?c:b;return d};a.prototype.DocumentAllHeight=function(){var c=0,d=0,b=0;if(document.body){d=document.body.scrollHeight}if(document.documentElement){b=document.documentElement.scrollHeight}c=(d-b>0)?d:b;return c};a.prototype.ProcessDocumentData=function(){var b=new RealTimeData();b.UnVisitableHeight=Dom.UnVisitableHeight();b.VisitHeight=Dom.VisitHeight();b.DocumentAllHeight=Dom.DocumentAllHeight();return b};return a}());var RequestOperator=(function(){function a(){}a.prototype.QueryString=function(){var c={};var g=document.location.toString();if(g.indexOf("?")>-1){var d=g.lastIndexOf("#")>-1?g.lastIndexOf("#"):g.length;var e=g.substring(g.indexOf("?")+1,d);var f=e.split("&");for(var b=0;b<f.length;b++){f[b]=f[b].split("=");c[f[b][0]]=f[b][1]}}return c};a.prototype.Anchor=function(){var b="";var c=document.location.toString();if(c.lastIndexOf("#")>-1){b=c.substring(c.lastIndexOf("#")+1)}return b};return a}());var App=new Application();var Dom=new DomOpertor();var FileItemDescription=(function(){function a(){}return a}());var ImagesDataNode=(function(a){__extends(b,a);function b(){return a!==null&&a.apply(this,arguments)||this}return b}(FileItemDescription));var ExecuteResultBase=(function(){function a(){}return a}());var UploadFileResult=(function(b){__extends(a,b);function a(){return b!==null&&b.apply(this,arguments)||this}return a}(ExecuteResultBase));var UploadData=(function(){function a(){}return a}());var PlanetApplication=(function(){function a(){}a.prototype.UploadImage=function(e,c,d,b){App.Upload(e,c,function(g){var f=JSON.parse(g);d(f)},b)};return a}());var PlanetApp=new PlanetApplication();var CONTENT_MAIN_BODY=null;var requestPage=2;function executeScrollLoad(){var e=Dom.ProcessDocumentData();var c=document.getElementById("MainBody");var f=Dom.MetaContent("fv");if(c==undefined||c==null||f==null){return}var a=parseFloat(f);if(a%1>0){a+=1}var g=(e.UnVisitableHeight+e.VisitHeight);var d=g/e.DocumentAllHeight;if(d>0.9){if(requestPage<=a){var b="/fallload/"+requestPage;requestPage+=1;App.Get(b,function(n){var m=JSON.parse(n);var l=m.length;if(l>0){for(var j=0;j<l;j++){var k=document.createElement("div");k.setAttribute("class","contentBox");if(m[j].Title!=undefined&&m[j].Title!=null&&m[j].Title.length>0){var p=document.createElement("h2");p.setAttribute("class","contentTitle");var h=document.createElement("a");h.href="/"+m[j].Url;h.dataset.src=h.href;h.dataset.ajax="true";h.innerHTML=m[j].Title;p.appendChild(h);k.appendChild(p)}if(m[j].Preview!=undefined&&m[j].Preview!=null&&m[j].Preview.length>0){var o=document.createElement("div");o.setAttribute("class","preContent");o.innerHTML=m[j].Preview;k.appendChild(o)}setAjax(k);c.appendChild(k)}}})}}}function HLS(c,e){var b=document.createElement("div");var a=document.createElement("video");a.id="video"+Math.random().toString().replace("0.","");a.controls=true;if(e){a.preload="auto"}a.setAttribute("class","video-js vjs-default-skin vjs-fluid vjs-big-play-centered");var d=document.createElement("source");d.src=c;d.type="application/x-mpegURL";a.appendChild(d);b.appendChild(a);document.write(b.innerHTML);Dom.AppendOnload(function(){var f=videojs(a.id);if(e){f.play()}})}function setAjax(d){var e=d.getElementsByTagName("a");for(var c=0;c<e.length;c++){var b=e[c];if(b.dataset.ajax){b.onclick=contentByAjax}}}function contentByAjax(){var a=this.dataset.src+"?load=ajax";this.href="javascript:void(0);";App.Get(a+"",function(d){var c=document.getElementById("MainBody");var b=document.getElementById("contentBody");if(c&&b){if(c.innerHTML&&c.innerHTML!=""){CONTENT_MAIN_BODY=c.innerHTML}c.innerHTML="";window.removeEventListener("scroll",executeScrollLoad);b.innerHTML=d;scroll(0,0);setAjax(b)}})}function reload(){if(CONTENT_MAIN_BODY!=null){var b=document.getElementById("MainBody");b.innerHTML=CONTENT_MAIN_BODY;scroll(0,0);setAjax(b);window.addEventListener("scroll",executeScrollLoad)}else{window.location.href="/"}var a=document.getElementById("contentBody");if(a){a.innerHTML=""}}function isOnVerticalViewPort(c,b){var a=c.getBoundingClientRect();return a.top>0&&a.top<=b.VisitHeight}function loadImg(j,d){var c=Dom.VisitWidth();for(var e=0;e<j.length;e++){var f=j[e];if(isOnVerticalViewPort(f,d)&&!f.isload&&f.dataset.src){var b=f.dataset.src;f.isload=true;var k=f.width;var g=f.height;if(k>=c){var a=c/k;f.style.width=c+"px";f.style.height=(g*a)+"px"}else{f.style.width=k+"px";f.style.height=g+"px"}f.setAttribute("src",b)}}}function lazyLoad(){var b=Dom.ProcessDocumentData();var a=document.getElementsByTagName("img");
-loadImg(a,b)}function setReturnIndex(){var c=document.getElementsByClassName("buttom_index_page");for(var d=0;d<c.length;d++){var b=c[d];b.addEventListener("click",reload)}}function ExecuteFunction(){lazyLoad();setAjax(document.body);setReturnIndex();window.addEventListener("scroll",executeScrollLoad);window.addEventListener("scroll",lazyLoad)}var ClientCommand=(function(){function a(){}return a}());var EachStay=(function(){function a(){}return a}());var ClientCommandType;(function(a){a[a["None"]=0]="None";a[a["RequestLog"]=1]="RequestLog";a[a["UpdateRequestLog"]=2]="UpdateRequestLog"})(ClientCommandType||(ClientCommandType={}));var rl=(function(){function a(){}return a}());var SatelliteHelper=(function(){function a(b){this.rid=b;this.alreadyInfo=false}a.prototype.CreateLog=function(c,d){var e=d.Loopdata();e.Did="ws";var b=JSON.stringify(e);c.send(b)};a.prototype.nullFunc=function(b){};a.prototype.Loop=function(b,d){var e=this;var c=document.createElement("img");c.width=0;c.height=0;document.body.appendChild(c);setInterval(function(){var g=e.Loopdata();g.Did="loop";var f=location.protocol+"//"+d+"/api/UpdateLog";f+="?r="+Math.random()+"&s="+encodeURIComponent(JSON.stringify(g));c.src=f},b)};a.prototype.Loopdata=function(){var c=Dom.ProcessDocumentData();var e=(c.UnVisitableHeight+c.VisitHeight);if(e<0){e=1}var b=(e/c.DocumentAllHeight)*100;var d=new rl();d.Percent=b;if(!this.alreadyInfo){d.UserAgent=window.navigator.userAgent;d.Referer=document.referrer;d.Cookie=App.GetCookie("cd");this.alreadyInfo=true}d.Id=this.rid;return d};return a}());var RequestType;(function(a){a[a["loop"]=0]="loop";a[a["ws"]=1]="ws"})(RequestType||(RequestType={}));var SatelliteApp=(function(){function a(b,d,e,c){this.loop=b;this.rid=d;this.host=e;if(c==undefined||c==null){this.type=RequestType.ws}else{if(c=="a"){this.type=RequestType.loop}else{this.type=RequestType.ws}}}a.prototype.log=function(){if("WebSocket" in window&&this.type==RequestType.ws){var d=(location.protocol=="https:"?"wss":"ws")+"://";var b=new WebSocket(d+this.host+"/ws/online");b.rid=this.rid;b.loop=this.loop;b.host=this.host;b.onmessage=this.wsMessage;b.onopen=this.wsOpen;b.onclose=this.wsOnClose;b.onerror=this.wsOnError;return b}else{var c=new SatelliteHelper(this.rid);c.Loop(this.loop,this.host)}};a.prototype.wsMessage=function(){};a.prototype.wsOpen=function(){console.log("on open");var b=new SatelliteHelper(this.rid);setInterval(b.CreateLog,this.loop,this,b)};a.prototype.wsOnError=function(c){console.log("on message");var b=new SatelliteHelper(this.rid);b.Loop(this.loop,this.host)};a.prototype.wsOnClose=function(b){console.log("on message")};return a}());
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var RealTimeData = (function () {
+    function RealTimeData() {
+        this.DocumentAllHeight = 0;
+        this.UnVisitableHeight = 0;
+        this.VisitHeight = 0;
+    }
+    return RealTimeData;
+}());
+var Application = (function () {
+    function Application() {
+    }
+    Application.prototype.createBaesXMLHttp = function (url, method, func) {
+        var x = new XMLHttpRequest();
+        x.open(method, url, true);
+        if (func != null) {
+            x.onreadystatechange = function () {
+                if (x.readyState == 4 && x.status == 200) {
+                    if (func != null && func != undefined) {
+                        func(x.responseText);
+                    }
+                }
+            };
+        }
+        return x;
+    };
+    Application.prototype.createXMLHttp = function (url, method, func) {
+        var x = this.createBaesXMLHttp(url, method, func);
+        x.setRequestHeader("Cache-Control", "no-cache");
+        x.setRequestHeader("If-Modified-Since", "0");
+        return x;
+    };
+    Application.prototype.ser = function (obj) {
+        var str = [];
+        for (var p in obj) {
+            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+        }
+        return str.join("&");
+    };
+    Application.prototype.Get = function (url, func) {
+        var x = this.createXMLHttp(url, "GET", func);
+        x.send(null);
+    };
+    Application.prototype.PostObject = function (url, data, func) {
+        var x = this.createXMLHttp(url, "POST", func);
+        x.setRequestHeader("Content-type", "application/json; charset=utf-8");
+        x.send(JSON.stringify(data));
+    };
+    Application.prototype.PostString = function (url, data, func) {
+        var x = this.createXMLHttp(url, "POST", func);
+        x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        x.send(data);
+    };
+    Application.prototype.Post = function (url, data, func) {
+        this.PostString(url, this.ser(data), func);
+    };
+    Application.prototype.SerializeFormToArray = function (form) {
+        var parts = [], elems = form.elements, i = 0, len = elems.length, filed = null;
+        for (; i < len; i++) {
+            filed = elems[i];
+            switch (filed.type) {
+                case "select-one":
+                case "select-multiple":
+                    if (filed.name.length) {
+                        var j = 0, opt, optLen = filed.options.length;
+                        for (; j < optLen; j++) {
+                            opt = filed.options[j];
+                            if (opt.selected) {
+                                parts.push(encodeURIComponent(filed.name) + "=" + encodeURIComponent(opt.value));
+                            }
+                        }
+                    }
+                    break;
+                case undefined:
+                case "submit":
+                case "reset":
+                case "file":
+                case "button":
+                    break;
+                case "radio":
+                case "checkbox":
+                    if (!filed.checked) {
+                        break;
+                    }
+                default:
+                    if (filed.name.length && filed.value) {
+                        parts.push(encodeURIComponent(filed.name) + "=" + encodeURIComponent(filed.value));
+                    }
+            }
+        }
+        return parts.join("&");
+    };
+    Application.prototype.Upload = function (formId, url, func, progressFunc) {
+        var oData = new FormData(document.forms.namedItem(formId));
+        var x = this.createBaesXMLHttp(url, "POST", func);
+        if (progressFunc != null && progressFunc != undefined) {
+            x.upload.onprogress = progressFunc;
+        }
+        x.send(oData);
+    };
+    Application.prototype.Include = function (src, async) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = src;
+        if (async)
+            script.async = true;
+        document.getElementsByTagName("head")[0].appendChild(script);
+        return script;
+    };
+    Application.prototype.iFrame = function (src) {
+        var iframe = document.createElement("iframe");
+        iframe.src = src;
+        iframe.setAttribute("width", "0‌​");
+        iframe.setAttribute("height", "0‌​");
+        iframe.setAttribute("frameborder", "0‌​");
+        document.body.appendChild(iframe);
+    };
+    Application.prototype.FunctionCallBack = function (func, args) {
+        return function () {
+            func(args);
+        };
+    };
+    Application.prototype.WebSocket = function (url, open, onMessage, onClose, onError) {
+        var ws;
+        if ("WebSocket" in window) {
+            ws = new WebSocket(url);
+            ws.onopen = open;
+            ws.onmessage = onMessage;
+            if (onClose != undefined && onError != null) {
+                ws.onclose = onClose;
+            }
+            if (onError != undefined && onError != null) {
+                ws.onerror = onError;
+            }
+        }
+        return ws;
+    };
+    Application.prototype.PreloadImage = function () {
+        var imgs = new Array();
+        if (document.images) {
+            var i = 0;
+            var j = imgs.length;
+            var a = arguments;
+            var length_1 = a.length;
+            for (; i < length_1; i++) {
+                if (a[i].indexOf("#") != 0) {
+                    imgs[j] = new Image;
+                    imgs[j++].src = a[i];
+                }
+            }
+        }
+        return imgs;
+    };
+    Application.prototype.SetCookie = function (name, value) {
+        var Days = 3650;
+        var exp = new Date();
+        exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toUTCString() + ";path=/";
+    };
+    Application.prototype.GetCookie = function (name) {
+        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+        if (arr != undefined)
+            return unescape(arr[2]);
+        return undefined;
+    };
+    Application.prototype.DeleteCookie = function (name) {
+        var ThreeDays = 3 * 24 * 60 * 60 * 1000;
+        var expDate = new Date();
+        expDate.setTime(expDate.getTime() - ThreeDays);
+        document.cookie = name + "=;expires=" + expDate.toUTCString();
+    };
+    return Application;
+}());
+var DomOpertor = (function () {
+    function DomOpertor() {
+    }
+    DomOpertor.prototype.GE = function (arg) {
+        if (arguments.length == 0)
+            return false;
+        var arr = [];
+        for (var i = 0; i < arguments.length; i++) {
+            var o = arguments[i];
+            if (typeof (o) == 'string')
+                o = document.getElementById(o);
+            if (arguments.length == 1)
+                return o;
+            arr.push(o);
+        }
+        return arr;
+    };
+    DomOpertor.prototype.RemoveByObject = function (obj) {
+        if (obj.parentNode) {
+            var parent_1 = obj.parentNode;
+            parent_1.removeChild(obj);
+            return parent_1;
+        }
+        else {
+            return obj;
+        }
+    };
+    DomOpertor.prototype.RemoveById = function (id) {
+        var obj = document.getElementById(id);
+        return this.RemoveByObject(obj);
+    };
+    DomOpertor.prototype.AppendByParentId = function (parentId, type, id) {
+        var obj = document.getElementById(parentId);
+        return this.AppendByParentObject(obj, type, id);
+    };
+    DomOpertor.prototype.AppendByParentObject = function (parent, typeName, idName) {
+        var child = this.CreateBaseNode(typeName, idName);
+        parent.appendChild(child);
+        return child;
+    };
+    DomOpertor.prototype.CreateBaseNode = function (typeName, idName) {
+        var obj = document.createElement(typeName);
+        if (idName != null && idName != undefined) {
+            obj.setAttribute("id", idName);
+        }
+        return obj;
+    };
+    DomOpertor.prototype.SetClass = function (dom, cssName) {
+        var r = document.createAttribute("class");
+        r.value = cssName;
+        dom.setAttributeNode(r);
+        return dom;
+    };
+    DomOpertor.prototype.MetaContent = function (name) {
+        var temp = "";
+        var meta = document.getElementsByTagName("meta");
+        for (var i = 0; i < meta.length; i++) {
+            if (meta[i].getAttribute("name") == name)
+                temp = meta[i].getAttribute("content");
+        }
+        return temp;
+    };
+    DomOpertor.prototype.AppendListener = function (dom, methodname, func) {
+        if (dom.addEventListener) {
+            try {
+                dom.addEventListener(methodname, func, false);
+            }
+            catch (e) {
+                console.log(e);
+            }
+        }
+        return dom;
+    };
+    DomOpertor.prototype.AppendOnload = function (func) {
+        this.AppendListener(window, "load", func);
+    };
+    DomOpertor.prototype.VisitWidth = function () {
+        var windowWidth = 0;
+        if (document.compatMode == "CSS1Compat") {
+            windowWidth = document.documentElement.clientWidth;
+        }
+        else {
+            windowWidth = document.body.clientWidth;
+        }
+        return windowWidth;
+    };
+    DomOpertor.prototype.VisitHeight = function () {
+        var windowHeight = 0;
+        if (document.compatMode == "CSS1Compat") {
+            windowHeight = document.documentElement.clientHeight;
+        }
+        else {
+            windowHeight = document.body.clientHeight;
+        }
+        return windowHeight;
+    };
+    DomOpertor.prototype.UnVisitableHeight = function () {
+        var scrollTop = 0, bodyScrollTop = 0, documentScrollTop = 0;
+        if (document.body) {
+            bodyScrollTop = document.body.scrollTop;
+        }
+        if (document.documentElement) {
+            documentScrollTop = document.documentElement.scrollTop;
+        }
+        scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+        return scrollTop;
+    };
+    DomOpertor.prototype.DocumentAllHeight = function () {
+        var scrollHeight = 0, bodyScrollHeight = 0, documentScrollHeight = 0;
+        if (document.body) {
+            bodyScrollHeight = document.body.scrollHeight;
+        }
+        if (document.documentElement) {
+            documentScrollHeight = document.documentElement.scrollHeight;
+        }
+        scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+        return scrollHeight;
+    };
+    DomOpertor.prototype.ProcessDocumentData = function () {
+        var d = new RealTimeData();
+        d.UnVisitableHeight = Dom.UnVisitableHeight();
+        d.VisitHeight = Dom.VisitHeight();
+        d.DocumentAllHeight = Dom.DocumentAllHeight();
+        return d;
+    };
+    return DomOpertor;
+}());
+var RequestOperator = (function () {
+    function RequestOperator() {
+    }
+    RequestOperator.prototype.QueryString = function () {
+        var result = {};
+        var loc = document.location.toString();
+        if (loc.indexOf("?") > -1) {
+            var l = loc.lastIndexOf("#") > -1 ? loc.lastIndexOf("#") : loc.length;
+            var param_str = loc.substring(loc.indexOf("?") + 1, l);
+            var params = param_str.split("&");
+            for (var x = 0; x < params.length; x++) {
+                params[x] = params[x].split("=");
+                result[params[x][0]] = params[x][1];
+            }
+        }
+        return result;
+    };
+    RequestOperator.prototype.Anchor = function () {
+        var _anchor = "";
+        var loc = document.location.toString();
+        if (loc.lastIndexOf("#") > -1) {
+            _anchor = loc.substring(loc.lastIndexOf("#") + 1);
+        }
+        return _anchor;
+    };
+    return RequestOperator;
+}());
+var App = new Application();
+var Dom = new DomOpertor();
+var CONTENT_MAIN_BODY = null;
+var requestPage = 2;
+function executeScrollLoad() {
+    var data = Dom.ProcessDocumentData();
+    var mainBody = document.getElementById("MainBody");
+    var fv = Dom.MetaContent("fv");
+    if (mainBody == undefined || mainBody == null || fv == null) {
+        return;
+    }
+    var maxPage = parseFloat(fv);
+    if (maxPage % 1 > 0)
+        maxPage += 1;
+    var currentHeight = (data.UnVisitableHeight + data.VisitHeight);
+    var percent = currentHeight / data.DocumentAllHeight;
+    if (percent > 0.9) {
+        if (requestPage <= maxPage) {
+            var url = "/fallload/" + requestPage;
+            requestPage += 1;
+            App.Get(url, function (data) {
+                var contents = JSON.parse(data);
+                var length = contents.length;
+                if (length > 0) {
+                    for (var i = 0; i < length; i++) {
+                        var box = document.createElement("div");
+                        box.setAttribute("class", "contentBox");
+                        var cst = contents[i];
+                        if (cst.title != null && cst.title.length > 0) {
+                            var title = document.createElement("h2");
+                            title.setAttribute("class", "contentTitle");
+                            var titleText = document.createElement("a");
+                            titleText.href = "/" + cst.url;
+                            titleText.dataset.src = titleText.href;
+                            titleText.dataset.ajax = "true";
+                            titleText.innerHTML = cst.title;
+                            title.appendChild(titleText);
+                            box.appendChild(title);
+                        }
+                        if (cst.preview != null && cst.preview.length > 0) {
+                            var preview = document.createElement("div");
+                            preview.setAttribute("class", "preContent");
+                            preview.innerHTML = cst.preview;
+                            box.appendChild(preview);
+                        }
+                        setAjax(box);
+                        mainBody.appendChild(box);
+                    }
+                }
+            });
+        }
+    }
+}
+function HLS(uri, autoplay) {
+    var parent = document.createElement("div");
+    var v = document.createElement("video");
+    v.id = "video" + Math.random().toString().replace("0.", "");
+    v.controls = true;
+    if (autoplay)
+        v.preload = "auto";
+    v.setAttribute("class", "video-js vjs-default-skin vjs-fluid vjs-big-play-centered");
+    var source = document.createElement("source");
+    source.src = uri;
+    source.type = "application/x-mpegURL";
+    v.appendChild(source);
+    parent.appendChild(v);
+    document.write(parent.innerHTML);
+    Dom.AppendOnload(function () {
+        var player = videojs(v.id);
+        if (autoplay)
+            player.play();
+    });
+}
+function setAjax(dom) {
+}
+function contentByAjax() {
+    var src = this.dataset.src + "?load=ajax";
+    this.href = "javascript:void(0);";
+    App.Get(src + "", function (e) {
+        var mainBody = document.getElementById("MainBody");
+        var contentBody = document.getElementById("contentBody");
+        if (mainBody && contentBody) {
+            if (mainBody.innerHTML && mainBody.innerHTML != "") {
+                CONTENT_MAIN_BODY = mainBody.innerHTML;
+            }
+            mainBody.innerHTML = "";
+            window.removeEventListener("scroll", executeScrollLoad);
+            contentBody.innerHTML = e;
+            scroll(0, 0);
+            setAjax(contentBody);
+        }
+    });
+}
+function reload() {
+    if (CONTENT_MAIN_BODY != null) {
+        var mainBody = document.getElementById("MainBody");
+        mainBody.innerHTML = CONTENT_MAIN_BODY;
+        scroll(0, 0);
+        setAjax(mainBody);
+        window.addEventListener("scroll", executeScrollLoad);
+    }
+    else {
+        window.location.href = "/";
+    }
+    var contentBody = document.getElementById("contentBody");
+    if (contentBody) {
+        contentBody.innerHTML = "";
+    }
+}
+function isOnVerticalViewPort(ele, data) {
+    var rect = ele.getBoundingClientRect();
+    return rect.top > 0 && rect.top <= data.VisitHeight;
+}
+function loadImg(images, data) {
+    var winWidth = Dom.VisitWidth();
+    for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        if (isOnVerticalViewPort(img, data) && !img.isload && img.dataset.src) {
+            var url = img.dataset.src;
+            img.isload = true;
+            var w = img.width;
+            var h = img.height;
+            if (w >= winWidth) {
+                var wh = winWidth / w;
+                img.style.width = winWidth + "px";
+                img.style.height = (h * wh) + "px";
+            }
+            else {
+                img.style.width = w + "px";
+                img.style.height = h + "px";
+            }
+            img.setAttribute("src", url);
+        }
+    }
+}
+function lazyLoad() {
+    var data = Dom.ProcessDocumentData();
+    var images = document.getElementsByTagName("img");
+    loadImg(images, data);
+}
+function setReturnIndex() {
+    var tags = document.getElementsByClassName("buttom_index_page");
+    for (var i = 0; i < tags.length; i++) {
+        var a = tags[i];
+        a.addEventListener("click", reload);
+    }
+}
+function ExecuteFunction() {
+    lazyLoad();
+    window.addEventListener("scroll", executeScrollLoad);
+    window.addEventListener("scroll", lazyLoad);
+}
+var FileItemDescription = (function () {
+    function FileItemDescription() {
+    }
+    return FileItemDescription;
+}());
+var ImagesDataNode = (function (_super) {
+    __extends(ImagesDataNode, _super);
+    function ImagesDataNode() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return ImagesDataNode;
+}(FileItemDescription));
+var ExecuteResultBase = (function () {
+    function ExecuteResultBase() {
+    }
+    return ExecuteResultBase;
+}());
+var UploadFileResult = (function (_super) {
+    __extends(UploadFileResult, _super);
+    function UploadFileResult() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return UploadFileResult;
+}(ExecuteResultBase));
+var UploadData = (function () {
+    function UploadData() {
+    }
+    return UploadData;
+}());
+var PlanetApplication = (function () {
+    function PlanetApplication() {
+    }
+    PlanetApplication.prototype.UploadImage = function (formId, url, onSuccess, progress) {
+        App.Upload(formId, url, function (e) {
+            var data = JSON.parse(e);
+            onSuccess(data);
+        }, progress);
+    };
+    return PlanetApplication;
+}());
+var PlanetApp = new PlanetApplication();
+
 </script>
     
 </head>
@@ -44,29 +577,31 @@ loadImg(a,b)}function setReturnIndex(){var c=document.getElementsByClassName("bu
         <div class="contentBox">
                 <div class="preContent">
                     <div class="viewCenter mainTextLine">
-<p>i'm a photographer, lot of years i explore around the Himalayan range, for to log the human geography and beautiful landscapes.<a href="/about"> more about......</a></p>
-<p><a href="https://www.youtube.com/user/liangyichen">Subscribe to my Youtube channel, if you like.</a></p>
+<p>i has been providing scenery videos in 4K Ultra HDR and 1080p Full HD . series of breathtaking Himalayas.And the latest photography technology exploration.<a href="/about"> more about......</a></p>
+<p>Youtube: <a href="https://www.youtube.com/channel/UCUiedZ5_ec_afnvRgMKR4Ag">Himalayan Graphic</a></p>
+<p><a target="_blank" href="https://www.instagram.com/Mr.LiangYichen/">Instagram</a> | <a target="_blank" href="https://500px.com/liangyichen">500px</a></p>
 </div>
                 </div>
         </div>
         <div class="contentBox">
                 <h2 class="contentTitle"><a data-ajax="true" data-src="/tibet-hdr-dolby-vision" href="/tibet-hdr-dolby-vision">Tibet 4K HDR Dolby Vision | Amazing Nature - Most Beautiful Places</a></h2>
                 <div class="preContent">
-                    <iframe width="900" height="506" src="https://www.youtube.com/embed/LRv7t0oKoDI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtubeplayer" width="100%" height="100%" src="https://www.youtube.com/embed/De-uLBVo7n8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                 </div>
         </div>
         <div class="contentBox">
                 <h2 class="contentTitle"><a data-ajax="true" data-src="/khumbu-photos" href="/khumbu-photos">[4K] Everest Khumbu District, photos of the Sagarmatha National Park in Nepal</a></h2>
                 <div class="preContent">
-                    <iframe width="900" height="506" src="https://www.youtube.com/embed/bdHGddXKK6w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtubeplayer" width="100%" height="100%" src="https://www.youtube.com/embed/B5UMF_zxC80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                 </div>
         </div>
         <div class="contentBox">
-                <h2 class="contentTitle"><a data-ajax="true" data-src="/annapurna-south-range" href="/annapurna-south-range">[8K HDR] Annapurna South Range, Himalaya View.</a></h2>
+                <h2 class="contentTitle"><a data-ajax="true" data-src="/annapurna-south-range" href="/annapurna-south-range">Annapurna South Range</a></h2>
                 <div class="preContent">
-                    <iframe width="900" height="506" src="https://www.youtube.com/embed/iFagaavCyDM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtubeplayer" width="100%" height="100%" src="https://www.youtube.com/embed/jFZUxxt0AcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
                 </div>
         </div>
         <div class="contentBox">
@@ -169,15 +704,17 @@ loadImg(a,b)}function setReturnIndex(){var c=document.getElementsByClassName("bu
 
 <script>
 
+
+        var btns = document.getElementsByClassName("youtubeplayer");
+        for( var y = 0; y < btns.length; y++){
+
+          //16:9
+          var autoWidth = (document.body.clientWidth/1.77);
+          btns[y].style.height = autoWidth+"px";
+         
+        }
 ExecuteFunction();
 
-
-
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MSWFKRW');
-
-</script></body>
+</script>
+</body>
 </html>
